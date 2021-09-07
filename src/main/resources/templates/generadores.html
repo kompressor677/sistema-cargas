@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Araqiel - Generadores</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Araqiel: M&oacute;dulo de Cargas</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/generadores}">Generadores de DataCenter VE</a>
+      </li>
+    </ul>
+  </div>
+</nav> 
+
+
+
+<div class="container">
+	<div class = "row">
+		<h1>Listado de Generadores Nuevo DC</h1>
+	</div>
+		
+	<div class= "row">
+		<div class = "col-lg-3">
+			<a th:href = "@{/generadores/nuevo}" class = "btn btn-primary btn-sm mb-3">Agregar Generador </a>
+		</div>
+	
+	</div>
+		
+	<table class = "table table-striped table-bordered">
+		<thead class = "table-dark">
+			<tr>
+				<th> Capacidad en Litros</th>
+				<th> Marca</th>
+				<th> Modelo</th>
+				<th> Nro de Serie</th>
+				<th class="text-center"> ACCIONES</th>
+				
+		</thead>
+		
+		<tbody>
+			<tr th:each = "generador: ${generadores}">
+				<td th:text = "${generador.capacidad}"></td>
+				<td th:text = "${generador.marca}"></td>
+				<td th:text = "${generador.modelo}"></td>
+				<td th:text = "${generador.nro_serie}"></td>
+				
+			  	<td class="text-center">
+					<a th:href ="@{/generadores/editar/{id}(id=${generador.generadorid})}" class= "btn btn-primary">Actualizar</a>
+				
+					<a th:href ="@{/generadores/{id}(id=${generador.generadorid})}" class= "btn btn-danger">Borrar</a>
+				</td> 
+			          
+			</tr>
+		
+		
+		</tbody>
+		
+	
+	</table>
+	
+</div>
+
+</body>
+</html>
