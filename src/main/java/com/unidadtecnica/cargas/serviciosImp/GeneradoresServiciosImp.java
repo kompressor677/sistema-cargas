@@ -14,11 +14,13 @@ public class GeneradoresServiciosImp implements GeneradoresServicios {
 	
 	private GeneradoresRepo generadoresRepo;
 	
+	//constructor de GeneradoresServiciosImp
 	public GeneradoresServiciosImp(GeneradoresRepo generadoresRepo) {
 		super();
 		this.generadoresRepo = generadoresRepo;
 	}
 
+	//función para listar todos los generadores
 	@Override
 	public List<GeneradoresModelo> listarTodosLosGeneradores() {
 		
