@@ -9,6 +9,7 @@ import com.unidadtecnica.cargas.servicios.TarjetasServicios;
 @Controller
 public class ControladorTarjetas {
 
+	//constructor de TarjetasServicios
 	private TarjetasServicios tarjetasServicios;
 	
 	public ControladorTarjetas(TarjetasServicios tarjetasServicios) {
