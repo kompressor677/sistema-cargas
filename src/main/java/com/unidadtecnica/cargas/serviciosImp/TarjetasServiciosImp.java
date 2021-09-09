@@ -29,25 +29,26 @@ public class TarjetasServiciosImp implements TarjetasServicios {
 
 	@Override
 	public TarjetasModelo guardarTarjeta(TarjetasModelo tarjeta) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return tarjetasRepo.save(tarjeta);
 	}
 
 	@Override
 	public TarjetasModelo tarjetaPorId(Long tarjetaid) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return tarjetasRepo.getById(tarjetaid);
 	}
 
 	@Override
 	public TarjetasModelo actualizarTarjeta(TarjetasModelo tarjeta) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return tarjetasRepo.save(tarjeta);
 	}
 
 	@Override
 	public void borrarTarjetaPorId(Long id) {
-		// TODO Auto-generated method stub
+		
+		tarjetasRepo.deleteById(id);
 		
 	}
 
