@@ -31,7 +31,7 @@ public class TicketsModelo {
 	private int precio_x_litro;
 	
 	@Column
-	private Long monto_total;
+	private Long monto_total_gs;
 	
 	@Column
 	private Long saldo_tarjeta;
@@ -45,14 +45,14 @@ public class TicketsModelo {
 		
 	}
 	
-	public TicketsModelo(Date fecha, String tipo_combus, float cantidad, int precio_x_litro, Long monto_total,
+	public TicketsModelo(Date fecha, String tipo_combus, float cantidad, int precio_x_litro, Long monto_total_gs,
 			Long saldo_tarjeta) {
 		super();
 		this.fecha = fecha;
 		this.tipo_combus = tipo_combus;
 		this.cantidad = cantidad;
 		this.precio_x_litro = precio_x_litro;
-		this.monto_total = monto_total;
+		this.monto_total_gs = monto_total_gs;
 		this.saldo_tarjeta = saldo_tarjeta;
 	}
 	public Long getTicketid() {
@@ -85,11 +85,11 @@ public class TicketsModelo {
 	public void setPrecio_x_litro(int precio_x_litro) {
 		this.precio_x_litro = precio_x_litro;
 	}
-	public Long getMonto_total() {
-		return monto_total;
+	public Long getMonto_total_gs() {
+		return monto_total_gs;
 	}
-	public void setMonto_total(Long monto_total) {
-		this.monto_total = monto_total;
+	public void setMonto_total_gs(Long monto_total) {
+		this.monto_total_gs = monto_total;
 	}
 	public Long getSaldo_tarjeta() {
 		return saldo_tarjeta;
