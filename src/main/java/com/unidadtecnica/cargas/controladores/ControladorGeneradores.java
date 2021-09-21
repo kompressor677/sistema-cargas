@@ -22,6 +22,7 @@ public class ControladorGeneradores {
 			
 		}
 		
+		//
 		//listar todos los generadores
 		@GetMapping("/generadores")
 		public String listarGeneradores(Model model) {
